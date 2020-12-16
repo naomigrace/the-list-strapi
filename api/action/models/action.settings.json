@@ -26,15 +26,29 @@
     "cover": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
     "slug": {
       "type": "uid"
     },
-    "category": {
-      "model": "categories"
+    "categories": {
+      "collection": "categories",
+      "via": "actions",
+      "dominant": true
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "neighborhood": {
+      "via": "actions",
+      "model": "neighborhoods"
     }
   }
 }

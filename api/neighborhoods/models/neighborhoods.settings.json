@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "neighborhoods",
+  "info": {
+    "name": "Neighborhoods",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "actions": {
+      "collection": "action",
+      "via": "neighborhood"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}
