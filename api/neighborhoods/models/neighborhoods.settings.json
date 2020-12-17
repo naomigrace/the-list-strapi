@@ -15,8 +15,8 @@
       "type": "string"
     },
     "actions": {
-      "collection": "action",
-      "via": "neighborhood"
+      "via": "neighborhood",
+      "collection": "action"
     },
     "slug": {
       "type": "uid",

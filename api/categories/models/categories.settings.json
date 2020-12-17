@@ -24,7 +24,8 @@
       "required": false
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "title"
     },
     "actions": {
       "via": "categories",

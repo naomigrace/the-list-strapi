@@ -35,7 +35,8 @@
       "required": false
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "title"
     },
     "categories": {
       "collection": "categories",
@@ -47,8 +48,11 @@
       "default": false
     },
     "neighborhood": {
-      "via": "actions",
-      "model": "neighborhoods"
+      "model": "neighborhoods",
+      "via": "actions"
+    },
+    "geojson": {
+      "type": "json"
     }
   }
 }

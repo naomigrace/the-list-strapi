@@ -6,4 +6,5 @@ module.exports = ({ env }) => ({
       secret: env("ADMIN_JWT_SECRET"),
     },
   },
+  google: env("GOOGLE_API_KEY"),
 });
