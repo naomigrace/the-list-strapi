@@ -11,12 +11,14 @@ module.exports = {
   lifecycles: {
     beforeCreate: async (data) => {
       if (data.location) {
-        data.geojson = await getFeatureFromAction(data);
+        const geojson = await getFeatureFromAction(data);
+        data.geojson = geojson;
       }
     },
     afterUpdate: async (data) => {
       if (data.location) {
-        data.geojson = await getFeatureFromAction(data);
+        const geojson = await getFeatureFromAction(data);
+        data.geojson = geojson;
       }
     },
   },
