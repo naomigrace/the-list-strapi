@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/films-and-shows",
+      "handler": "films-and-shows.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/films-and-shows/count",
+      "handler": "films-and-shows.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/films-and-shows/:id",
+      "handler": "films-and-shows.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/films-and-shows",
+      "handler": "films-and-shows.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/films-and-shows/:id",
+      "handler": "films-and-shows.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/films-and-shows/:id",
+      "handler": "films-and-shows.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -15,6 +15,7 @@
     "node-fetch": "^2.6.1",
     "pg": "^8.3.3",
     "pg-connection-string": "^2.4.0",
+    "slugify": "^1.4.6",
     "sqlite3": "latest",
     "strapi": "^3.4.1",
     "strapi-admin": "3.4.1",

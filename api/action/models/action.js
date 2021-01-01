@@ -1,5 +1,5 @@
 "use strict";
-
+const slugify = require("slugify");
 const { getFeatureFromAction } = require("../../../lib/getFeatureFromAction");
 
 /**
@@ -14,11 +14,17 @@ module.exports = {
         const geojson = await getFeatureFromAction(data);
         data.geojson = geojson;
       }
+      if (data.title) {
+        data.slug = slugify(data.title).toLowerCase();
+      }
     },
     afterUpdate: async (data) => {
       if (data.location) {
         const geojson = await getFeatureFromAction(data);
         data.geojson = geojson;
+      }
+      if (data.title) {
+        data.slug = slugify(data.title).toLowerCase();
       }
     },
   },

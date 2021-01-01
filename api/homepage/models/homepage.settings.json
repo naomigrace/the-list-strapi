@@ -51,6 +51,15 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "films": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

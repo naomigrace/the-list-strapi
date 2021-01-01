@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "films_and_shows",
+  "info": {
+    "name": "Films & Shows"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "completed_date": {
+      "type": "date"
+    },
+    "seasons": {
+      "type": "integer"
+    },
+    "provider": {
+      "type": "enumeration",
+      "enum": [
+        "netflix",
+        "amazon",
+        "hulu",
+        "youtube",
+        "dvd",
+        "theater"
+      ]
+    },
+    "provider_link": {
+      "type": "string"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
